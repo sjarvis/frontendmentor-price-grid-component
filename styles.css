@@ -43,3 +43,165 @@ h6 {
 #__next {
      isolation: isolate;
 }
+
+:root {
+     --cyan: hsl(179, 62%, 43%);
+     --lt-cyan: hsl(179, 62%, 48%);
+     --yellow: hsl(71, 73%, 54%);
+     --gray: hsl(204, 43%, 93%);
+     --gray-blue: hsl(218, 22%, 67%);
+}
+
+
+body {
+     font-family: 'Karla', sans-serif;
+     font-weight: 400;
+     background-color: var(--gray);
+     font-size: .9rem;
+}
+
+
+h1,
+h2,
+h3 {
+     font-weight: 700;
+}
+
+h1 {
+     font-size: 2.5rem;
+}
+
+h2 {
+     font-size: 1.25rem;
+     margin-block: 0 1rem;
+}
+
+h3 {
+     font-size: 1rem;
+     margin-block: 0 1rem;
+     line-height: 1.1;
+}
+
+
+.wrapper {
+     display: grid;
+     grid-template-columns: 1;
+     margin-inline: 1rem;
+     margin-block: 3rem;
+     background-color: white;
+     overflow: hidden;
+     border-radius: .5rem;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 18px;
+}
+
+.wrapper div {
+     padding: 2rem;
+}
+
+
+
+
+.wrapper .join {
+     color: var(--gray-blue);
+     line-height: 2;
+}
+
+.wrapper .join h2 {
+     color: var(--cyan);
+}
+
+.wrapper .join h3 {
+     color: var(--yellow);
+}
+
+
+
+
+
+.wrapper .sub {
+     background-color: var(--cyan);
+     color: white;
+}
+
+
+.wrapper .sub .price {
+     display: flex;
+     align-items: center;
+}
+
+.wrapper .sub .price .big {
+     font-weight: 700;
+     font-size: 2rem;
+     padding-inline: .5rem;
+}
+
+.wrapper .sub button {
+     display: block;
+     margin-block: 1rem;
+     padding: 1rem 6rem;
+     background-color: var(--yellow);
+     border: 0;
+     border-radius: .25rem;
+     color: white;
+     font-weight: 700;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.wrapper .sub button:hover,
+.wrapper .sub button:focus {
+     color: var(--yellow);
+     font-weight: 700;
+     background-color: white;
+     outline: 2px solid white;
+}
+
+
+
+
+.wrapper .whyus {
+     background-color: var(--lt-cyan);
+     color: white;
+}
+
+.wrapper .whyus ul,
+.wrapper .whyus ul li {
+     list-style-type: none;
+     margin-inline: 0;
+     margin-block: 0;
+     padding-inline: 0;
+     padding-block: 0;
+     text-indent: 0;
+     font-size: .9rem;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+     .wrapper {
+          max-width: 50%;
+          margin-inline: auto;
+
+          grid-template-columns: 50% 50%;
+
+     }
+
+
+     .wrapper .join {
+          grid-column-start: 1;
+          grid-column-end: 3;
+     }
+
+     .wrapper .join h2 {
+          font-size: 1.75rem;
+     }
+
+     .wrapper .join h3 {
+          font-size: 1.25rem;
+     }
+
+}
